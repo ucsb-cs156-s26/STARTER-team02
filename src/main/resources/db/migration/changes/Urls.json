@@ -1,0 +1,64 @@
+{ "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "Urls",
+        "author": "pconrad",
+        "preConditions": [
+          {
+            "onFail": "MARK_RAN"
+          },
+          {
+            "not": [
+              {
+                "tableExists": {
+                  "tableName": "URLS"
+                }
+              }
+            ]
+          }
+        ],
+        "changes": [
+          {
+            "createTable": {
+              "columns": [
+                {
+                  "column": {
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true,
+                      "primaryKeyName": "URLS_PK"
+                    },
+                    "name": "ID",
+                    "type": "BIGINT"
+                  }
+                },
+
+                {
+                  "column": {  
+                    "constraints": {
+                      "nullable": false
+                    },
+                    "name": "URL",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "SHORT_DESCRIPTION",
+                    "type": "VARCHAR(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "LONG_DESCRIPTION",
+                    "type": "VARCHAR(255)"
+                  }
+                }
+              ],
+              "tableName": "URLS"
+            }
+          }]
+  
+      }
+    }
+  ]}
