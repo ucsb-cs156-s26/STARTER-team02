@@ -1,8 +1,8 @@
 # STARTER-team02
 
-Instructions: <https://ucsb-cs156.github.io/f25/lab/team02.html>
+Instructions: <https://ucsb-cs156.github.io/s26/lab/team02.html>
 
-TODO: change heading above to your repo name, e.g. `# team02-f25-17`
+TODO: change heading above to your repo name, e.g. `# team02-s26-17`
 
 TODO: Add a link to the deployed Dokku app for your team here, e.g.
 

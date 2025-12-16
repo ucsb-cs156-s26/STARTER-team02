@@ -56,7 +56,7 @@ describe("Footer tests", () => {
       expect(githubLink).toBeInTheDocument();
       expect(githubLink).toHaveAttribute(
         "href",
-        "https://github.com/ucsb-cs156-f25/STARTER-team02",
+        "https://github.com/ucsb-cs156-s26/STARTER-team02",
       );
     });
   });
