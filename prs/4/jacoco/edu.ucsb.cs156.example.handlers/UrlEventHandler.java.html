@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RepositoryEventHandler(Url.class)
-<span class="nc" id="L10">public class UrlEventHandler {</span>
+<span class="fc" id="L10">public class UrlEventHandler {</span>
 
   // This method runs *before* a new entity is saved (POST) or an existing one is updated
   // (PUT/PATCH)
@@ -15,17 +15,17 @@ import org.springframework.stereotype.Component;
   public void handleBeforeCreate(Url url) {
 
     // Custom business logic validation
-<span class="nc bnc" id="L18" title="All 4 branches missed.">    if (!url.getUrl().startsWith(&quot;http://&quot;) &amp;&amp; !url.getUrl().startsWith(&quot;https://&quot;)) {</span>
-<span class="nc" id="L19">      throw new IllegalArgumentException(&quot;URL must start with http:// or https://&quot;);</span>
+<span class="fc bfc" id="L18" title="All 4 branches covered.">    if (!url.getUrl().startsWith(&quot;http://&quot;) &amp;&amp; !url.getUrl().startsWith(&quot;https://&quot;)) {</span>
+<span class="fc" id="L19">      throw new IllegalArgumentException(&quot;URL must start with http:// or https://&quot;);</span>
     }
     // Additional validation logic can be added here
-<span class="nc bnc" id="L22" title="All 2 branches missed.">    if (url.getUrl().length() &gt; 2000) {</span>
-<span class="nc" id="L23">      throw new IllegalArgumentException(&quot;URL is too long.&quot;);</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">    if (url.getUrl().length() &gt; 2000) {</span>
+<span class="fc" id="L23">      throw new IllegalArgumentException(&quot;URL is too long.&quot;);</span>
     }
     // Match against a regex pattern for legal URL formats
-<span class="nc" id="L26">    String urlPattern = &quot;^(http|https)://[a-zA-Z0-9.-]+(:[0-9]+)?(/.*)?$&quot;;</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">    if (!url.getUrl().matches(urlPattern)) {</span>
-<span class="nc" id="L28">      throw new IllegalArgumentException(&quot;URL format is invalid.&quot;);</span>
+<span class="fc" id="L26">    String urlPattern = &quot;^(http|https)://[a-zA-Z0-9.-]+(:[0-9]+)?(/.*)?$&quot;;</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">    if (!url.getUrl().matches(urlPattern)) {</span>
+<span class="fc" id="L28">      throw new IllegalArgumentException(&quot;URL format is invalid.&quot;);</span>
     }
 <span class="nc" id="L30">  }</span>
 }
