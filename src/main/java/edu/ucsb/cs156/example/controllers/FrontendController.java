@@ -1,6 +1,7 @@
 package edu.ucsb.cs156.example.controllers;
 
 import edu.ucsb.cs156.example.services.wiremock.WiremockService;
+import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  *
  * @see edu.ucsb.cs156.example.controllers.FrontendProxyController
  */
+@Hidden // Hides all endpoints in this controller
 @Profile("!development")
 @Controller
 public class FrontendController {

@@ -1,6 +1,7 @@
 package edu.ucsb.cs156.example.controllers;
 
 import edu.ucsb.cs156.example.services.wiremock.WiremockService;
+import io.swagger.v3.oas.annotations.Hidden;
 import java.net.ConnectException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.mvc.ProxyExchange;
@@ -20,6 +21,7 @@ import org.springframework.web.client.ResourceAccessException;
  *
  * @see edu.ucsb.cs156.example.controllers.FrontendController
  */
+@Hidden // Hides all endpoints in this controller
 @Profile("development")
 @RestController
 public class FrontendProxyController {
