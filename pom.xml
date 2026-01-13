@@ -342,14 +342,15 @@
             <param>${app.package}.config.SecurityConfig</param>
             <param>${app.package}.config.SpaCsrfTokenRequestHandler</param>
             <param>${app.package}.config.CsrfCookieFilter</param>
-            <param>edu.ucsb.cs156.example.services.wiremock.WiremockService</param>
-            <param>edu.ucsb.cs156.example.services.wiremock.WiremockServiceDummy</param>
-            <param>edu.ucsb.cs156.example.services.wiremock.WiremockServiceImpl</param>
+            <param>${app.package}.services.wiremock.WiremockService</param>
+            <param>${app.package}.services.wiremock.WiremockServiceDummy</param>
+            <param>${app.package}.services.wiremock.WiremockServiceImpl</param>
             <param>${app.package}.services.GrantedAuthoritiesService</param>
+            <param>${app.package}.config.RestConfig</param>
           </excludedClasses>
           <excludedTestClasses>
-            <param>edu.ucsb.cs156.example.web.*</param>
-            <param>edu.ucsb.cs156.example.integration.*</param>
+            <param>${app.package}.web.*</param>
+            <param>${app.package}.integration.*</param>
           </excludedTestClasses>
           <outputFormats>
             <outputFormat>HTML</outputFormat>
