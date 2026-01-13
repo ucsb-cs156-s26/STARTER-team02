@@ -22,7 +22,7 @@ on:
 jobs:
   createOneOffIssues:
     if: ${{ inputs.oneOffIssues }}
-    uses: ucsb-cs156-s26/STARTER-team02/.github/workflows/91-create-one-off-issues.yml@mail
+    uses: ucsb-cs156-s26/STARTER-team02/.github/workflows/91-create-one-off-issues.yml@main
 
     # steps:
     #   - name: Call workflow to create one off issues
