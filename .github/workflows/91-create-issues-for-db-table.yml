@@ -16,9 +16,18 @@ on:
   workflow_dispatch:
      inputs:
         api:
-           type: string
-           required: true
-           
+          type: choice
+          description: 'Select the deployment environment'
+          required: true
+          options:
+          - UCSBDiningCommonsMenuItem
+          - UCSBOrganization
+          - RecommendationRequest
+          - MenuItemReview
+          - HelpRequest
+          - Articles
+          default: 'UCSBDiningCommonsMenuItem'
+                     
 jobs:
   createIssues:
     runs-on: ubuntu-latest
