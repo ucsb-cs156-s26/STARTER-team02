@@ -20,9 +20,6 @@ on:
          default: true
          
 jobs:
-  createOneOffIssues:
-    if: ${{ inputs.oneOffIssues }}
-    uses: ucsb-cs156-s26/STARTER-team02/.github/workflows/91-create-one-off-issues.yml@main
 
     # steps:
     #   - name: Call workflow to create one off issues
@@ -197,7 +194,6 @@ jobs:
     #         See the assignment description at ${{env.ASN_LINK}} for details.
 
   createIssues:
-    needs: [createOneOffIssues]
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
@@ -216,6 +212,12 @@ jobs:
       - name: Debugging output
         run: |
           echo "matrix.api=${{ matrix.api }}"
+
+  createOneOffIssues:
+    if: ${{ inputs.oneOffIssues }}
+    needs: [createIssues]
+    uses: ucsb-cs156-s26/STARTER-team02/.github/workflows/91-create-one-off-issues.yml@main
+
           
       # - uses: actions/checkout@v4
       # - name: Delete Label for ${{ matrix.api }}
