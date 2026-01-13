@@ -13,6 +13,7 @@ env:
   SAMPLE_TEAM: s26-05
 on:
   workflow_dispatch:
+  workflow_call:
 
          
 jobs:
