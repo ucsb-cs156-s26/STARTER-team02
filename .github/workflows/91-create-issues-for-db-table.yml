@@ -1,4 +1,4 @@
-name: 99 - Create Issues for team02
+name: 91 - Create Issues for a single team02 api
 
 env:
   GH_TOKEN: ${{ github.token }}
