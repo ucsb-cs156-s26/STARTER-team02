@@ -33,6 +33,7 @@ on:
           - MenuItemReview
           - HelpRequest
           - Articles
+          - Url
           default: 'UCSBDiningCommonsMenuItem'
                      
 jobs:
