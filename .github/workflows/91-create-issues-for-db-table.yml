@@ -13,11 +13,18 @@ env:
   NVM_USE: "`nvm use 22.18.0`"
   SAMPLE_TEAM: s26-05
 on:
+  workflow_call:
+     inputs:
+        api:
+          type: string
+          description: 'Select the api/db table'
+          required: true
+          default: 'UCSBDiningCommonsMenuItem'
   workflow_dispatch:
      inputs:
         api:
           type: choice
-          description: 'Select the deployment environment'
+          description: 'Select the api/db table'
           required: true
           options:
           - UCSBDiningCommonsMenuItem
