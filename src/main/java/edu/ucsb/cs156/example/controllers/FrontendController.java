@@ -26,9 +26,12 @@ public class FrontendController {
   /**
    * Serve home page of application
    *
+   * <p>/ matches the home page
+   *
    * @return the home page (via index.html)
    */
-  @GetMapping("/**/{path:[^\\.]*}")
+  @GetMapping(
+      value = {"/", "/{first:^(?!api$)[^\\.]*}", "/{first:^(?!api$)[^\\.]*}/**/{path:[^\\.]*}"})
   public String index() {
     return "forward:/index.html";
   }
