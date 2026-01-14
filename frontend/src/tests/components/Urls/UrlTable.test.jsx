@@ -36,7 +36,7 @@ describe("UrlTable tests", () => {
     render(
       <QueryClientProvider client={queryClient}>
         <MemoryRouter>
-          <UrlTable urls={[]} currentUser={currentUser} />
+          <UrlTable urls={urlFixtures.empty} currentUser={currentUser} />
         </MemoryRouter>
       </QueryClientProvider>,
     );

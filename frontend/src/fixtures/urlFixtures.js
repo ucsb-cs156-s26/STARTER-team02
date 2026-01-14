@@ -1,4 +1,17 @@
 const urlFixtures = {
+  empty: {
+    _embedded: {
+      urls: [],
+    },
+    _links: {
+      self: {
+        href: "http://localhost:8080/api/rest/v1/urls",
+      },
+      profile: {
+        href: "http://localhost:8080/api/rest/v1/profile/urls",
+      },
+    },
+  },
   fourUrls: {
     _embedded: {
       urls: [

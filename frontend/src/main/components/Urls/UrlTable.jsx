@@ -58,10 +58,11 @@ export default function UrlTable({
     );
   }
 
-  const urlsForTable =
-    urls._embedded && urls._embedded.urls ? urls._embedded?.urls : [];
-
   return (
-    <OurTable data={urlsForTable} columns={columns} testid={testIdPrefix} />
+    <OurTable
+      data={urls._embedded.urls}
+      columns={columns}
+      testid={testIdPrefix}
+    />
   );
 }

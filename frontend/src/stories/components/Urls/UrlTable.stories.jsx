@@ -16,7 +16,7 @@ const Template = (args) => {
 export const Empty = Template.bind({});
 
 Empty.args = {
-  urls: [],
+  urls: urlFixtures.empty,
   currentUser: currentUserFixtures.userOnly,
 };
 
