@@ -46,6 +46,7 @@ describe("useLogout tests", () => {
 
     if (!result.current) {
       console.error("Hook failed to render, result.current is null.");
+      // eslint-disable-next-line vitest/no-conditional-expect
       expect(result.current).not.toBeNull();
       return;
     }
