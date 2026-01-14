@@ -13,7 +13,8 @@ function OurTable({ data, columns, testid = "testid" }) {
   const memoizedData = useMemo(() => data, [data]);
   const memoizedColumns = useMemo(() => columns, [columns]);
 
-  const table = useReactTable({ // eslint-disable-line react-hooks/incompatible-library
+  const table = useReactTable({
+    // eslint-disable-line react-hooks/incompatible-library
     data: memoizedData,
     columns: memoizedColumns,
     getCoreRowModel: getCoreRowModel(),
