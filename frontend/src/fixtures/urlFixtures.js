@@ -3,6 +3,7 @@ const urlFixtures = {
     _embedded: {
       urls: [
         {
+          id: 1,
           url: "https://ucsb.edu",
           shortDescription: "UCSB Home Page",
           longDescription:
@@ -17,6 +18,7 @@ const urlFixtures = {
           },
         },
         {
+          id: 2,
           url: "https://github.com",
           shortDescription: "Github Home Page",
           longDescription:
@@ -31,6 +33,7 @@ const urlFixtures = {
           },
         },
         {
+          id: 3,
           url: "https://www.baeldung.com/",
           shortDescription: "Baeldung",
           longDescription: "A site with lots of resources for Spring Boot",
@@ -44,6 +47,7 @@ const urlFixtures = {
           },
         },
         {
+          id: 4,
           url: "https://ucsb-cs156.github.io",
           shortDescription: "CS156 Home Page",
           longDescription:
