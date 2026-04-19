@@ -2,12 +2,12 @@ package edu.ucsb.cs156.example.web;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-import edu.ucsb.cs156.example.WebTestCase;
+import edu.ucsb.cs156.example.AuthenticatedWebTestCase;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.annotation.DirtiesContext;
 
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-public class RestaurantWebIT extends WebTestCase {
+public class RestaurantWebIT extends AuthenticatedWebTestCase {
   @Test
   public void admin_user_can_create_edit_delete_restaurant() throws Exception {
     setupUser(true);

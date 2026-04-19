@@ -2,10 +2,10 @@ package edu.ucsb.cs156.example.web;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-import edu.ucsb.cs156.example.WebTestCase;
+import edu.ucsb.cs156.example.AuthenticatedWebTestCase;
 import org.junit.jupiter.api.Test;
 
-public class OauthWebIT extends WebTestCase {
+public class OauthWebIT extends AuthenticatedWebTestCase {
   @Test
   public void regular_user_can_login_logout() throws Exception {
     setupUser(false);
