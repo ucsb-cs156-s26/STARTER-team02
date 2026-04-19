@@ -9,11 +9,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.ucsb.cs156.example.entities.Restaurant;
 import edu.ucsb.cs156.example.repositories.RestaurantRepository;
 import edu.ucsb.cs156.example.repositories.UserRepository;
-import edu.ucsb.cs156.example.services.CurrentUserService;
-import edu.ucsb.cs156.example.services.GrantedAuthoritiesService;
 import edu.ucsb.cs156.example.testconfig.TestConfig;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,23 +18,15 @@ import org.springframework.context.annotation.Import;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureMockMvc
-@ActiveProfiles("integration")
 @Import(TestConfig.class)
 @DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
+@AutoConfigureMockMvc
 public class RestaurantIT {
-  @Autowired public CurrentUserService currentUserService;
-
-  @Autowired public GrantedAuthoritiesService grantedAuthoritiesService;
-
   @Autowired RestaurantRepository restaurantRepository;
 
   @Autowired public MockMvc mockMvc;
