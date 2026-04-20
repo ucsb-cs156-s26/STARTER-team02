@@ -7,7 +7,7 @@ import org.wiremock.spring.ConfigureWireMock;
 import org.wiremock.spring.EnableWireMock;
 
 @EnableWireMock(@ConfigureWireMock(port = 0, registerSpringBean = true, globalTemplating = true))
-public class AuthenticatedWebTestCase extends WebTestCase {
+public abstract class AuthenticatedWebTestCase extends WebTestCase {
 
   @Autowired private WireMockServer wireMockServer;
 
