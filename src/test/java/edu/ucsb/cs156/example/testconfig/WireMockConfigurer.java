@@ -7,10 +7,8 @@ import com.github.tomakehurst.wiremock.WireMockServer;
 /**
  * This is a service for mocking authentication using wiremock
  *
- * <p>This class relies on property values. For hints on testing, see: <a href=
- * "https://www.baeldung.com/spring-boot-testing-configurationproperties">https://www.baeldung.com/spring-boot-testing-configurationproperties</a>
- * Specifically, based on the WireMock server port and Spring Boot application port, we configure
- * the WireMock server to return appropriate responses for OAuth and user information endpoints.
+ * <p>It is a static utility class that stubs out the required OAuth2 endpoints that Spring Security
+ * requires to allow users to sign in.
  */
 public class WireMockConfigurer {
 
