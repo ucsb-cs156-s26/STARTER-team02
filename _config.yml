@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s26/STARTER-team02
 owner: ucsb-cs156-s26
 repo_name: STARTER-team02
-pull_requests: [{"author":{"id":"MDQ6VXNlcjI2MzQ3ODk3","is_bot":false,"login":"Division7","name":"Daniel Jensen"},"headRefName":"dj-synchronize","number":110,"title":"Secondary Synchronization","url":"https://github.com/ucsb-cs156-s26/STARTER-team02/pull/110"},{"author":{"id":"MDQ6VXNlcjI2MzQ3ODk3","is_bot":false,"login":"Division7","name":"Daniel Jensen"},"headRefName":"dj-e2eRefactor","number":108,"title":"End to End Test Rewrite","url":"https://github.com/ucsb-cs156-s26/STARTER-team02/pull/108"}]
+pull_requests: [{"author":{"id":"MDQ6VXNlcjI2MzQ3ODk3","is_bot":false,"login":"Division7","name":"Daniel Jensen"},"headRefName":"dj-e2eRefactor","number":108,"title":"End to End Test Rewrite","url":"https://github.com/ucsb-cs156-s26/STARTER-team02/pull/108"}]
