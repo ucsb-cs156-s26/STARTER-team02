@@ -5,14 +5,12 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.ucsb.cs156.example.services.CurrentUserService;
 import edu.ucsb.cs156.example.services.GrantedAuthoritiesService;
-import edu.ucsb.cs156.example.services.wiremock.WiremockService;
 import edu.ucsb.cs156.example.testconfig.TestConfig;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
@@ -26,8 +24,6 @@ public abstract class ControllerTestCase {
   @Autowired public MockMvc mockMvc;
 
   @Autowired public ObjectMapper mapper;
-
-  @MockitoBean WiremockService mockWiremockService;
 
   protected Map<String, Object> responseToJson(MvcResult result)
       throws UnsupportedEncodingException, JsonProcessingException {
