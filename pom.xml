@@ -559,6 +559,9 @@
                 <configuration>
                   <arguments>run build</arguments>
                   <skip>${frontend.build.skip}</skip>
+                  <environmentVariables>
+                    <VITE_SILENCE_TOASTIFY>true</VITE_SILENCE_TOASTIFY>
+                  </environmentVariables>
                 </configuration>
               </execution>
             </executions>
