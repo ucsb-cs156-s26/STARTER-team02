@@ -1,9 +1,7 @@
 package edu.ucsb.cs156.example.controllers;
 
-import edu.ucsb.cs156.example.services.wiremock.WiremockService;
 import io.swagger.v3.oas.annotations.Hidden;
 import java.net.ConnectException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.mvc.ProxyExchange;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
@@ -25,9 +23,6 @@ import org.springframework.web.client.ResourceAccessException;
 @Profile("development")
 @RestController
 public class FrontendProxyController {
-
-  @Autowired WiremockService wiremockService;
-
   /**
    * This method proxies requests to the frontend server. It is only used in development. The
    * regular expression is used to exclude the paths that should NOT be proxied to the frontend

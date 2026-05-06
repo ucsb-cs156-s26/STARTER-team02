@@ -1,8 +1,6 @@
 package edu.ucsb.cs156.example;
 
-import edu.ucsb.cs156.example.services.wiremock.WiremockService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,22 +17,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableAsync // for @Async annotation for JobsService
 @EnableScheduling // for @Scheduled annotation for JobsService
 public class ExampleApplication {
-
-  @Autowired WiremockService wiremockService;
-
-  /**
-   * When using the wiremock profile, this method will call the code needed to set up the wiremock
-   * services
-   */
-  @Profile("wiremock")
-  @Bean
-  public ApplicationRunner wiremockApplicationRunner() {
-    return arg -> {
-      log.info("wiremock mode");
-      wiremockService.init();
-      log.info("wiremockApplicationRunner completed");
-    };
-  }
 
   /** Hook that can be used to set up any services needed for development */
   @Profile("development")
